@@ -1,0 +1,31 @@
+{
+	"name": "vampiro",
+	"displayName": "Vampiro",
+	"description": "A minimal, distraction-free color theme based on Dracula",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.69.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"scripts": {
+		"build": "node ./scripts/build.js",
+		"lint": "node ./scripts/lint.js"
+	},
+	"devDependencies": {
+		"js-yaml": "^4.1.0",
+		"prettier": "^2.6.0",
+		"tinycolor2": "^1.4.2",
+		"vsce": "^2.7.0"
+	},
+	"contributes": {
+		"themes": [
+			{
+				"label": "Vampiro",
+				"uiTheme": "vs-dark",
+				"path": "./theme/vampiro.json"
+			}
+		]
+	}
+}
