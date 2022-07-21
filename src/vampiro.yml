@@ -5,10 +5,10 @@ semanticHighlighting: true
 vampiro:
   base:
     - &BG "#282A36"
-    - &FG "#999"
-    - &FG_EDITOR "#CCC"
-    - &SELECTION "#44475A"
-    - &COMMENT "#6272A4"
+    - &FG "#93938E"
+    - &FG_LIGHT "#BEBEB9"
+    - &SELECTION "#444653"
+    - &COMMENT "#6E7392"
     - &CYAN "#8BE9FD"
     - &GREEN "#50FA7B"
     - &ORANGE "#FFB86C"
@@ -17,36 +17,36 @@ vampiro:
     - &RED "#FF5555"
     - &YELLOW "#F1FA8C"
   ansi:
-    - &COLOR0 "#21222C"
+    - &COLOR0 "#20222D"
     - &COLOR1 "#FF5555"
     - &COLOR2 "#50FA7B"
     - &COLOR3 "#F1FA8C"
     - &COLOR4 "#BD93F9"
     - &COLOR5 "#FF79C6"
     - &COLOR6 "#8BE9FD"
-    - &COLOR7 "#F8F8F2"
-    - &COLOR8 "#6272A4"
+    - &COLOR7 "#93938E"
+    - &COLOR8 "#6E7392"
     - &COLOR9 "#FF6E6E"
     - &COLOR10 "#69FF94"
     - &COLOR11 "#FFFFA5"
     - &COLOR12 "#D6ACFF"
     - &COLOR13 "#FF92DF"
     - &COLOR14 "#A4FFFF"
-    - &COLOR15 "#FFFFFF"
+    - &COLOR15 "#CCCCC6"
   brightOther:
     # Temporary (awaiting fix)
     - &TEMP_QUOTES "#E9F284"
     - &TEMP_PROPERTY_QUOTES "#8BE9FE"
   other:
-    - &LineHighlight "#44475A75"
-    - &NonText "#FFFFFF1A"
-    - &WHITE "#FFFFFF"
-    - &TAB_DROP_BG "#44475A70"
+    - &LineHighlight "#44465375"
+    - &NonText "#CCCCC61A"
+    - &WHITE "#CCCCC6"
+    - &TAB_DROP_BG "#44465370"
     # UI Variants
-    - &BGLighter "#424450"
-    - &BGLight "#343746" # HSV (230   , 25.71, 27.45)
-    - &BGDark "#21222C" # HSV (234.55, 25   , 17.25)
-    - &BGDarker "#191A21" # HSV (234.55, 25   , 13   )
+    - &BGLighter "#393B48"
+    - &BGLight "#333441" #
+    - &BGDark "#20222D" #
+    - &BGDarker "#191B26"
 
 # User Interface (more info: https://code.visualstudio.com/docs/getstarted/theme-color-reference)
 colors:
@@ -96,10 +96,10 @@ colors:
   dropdown.foreground: *FG # Dropdown foreground
 
   # Input Control
-  input.background: *BG # Input box background
+  input.background: *BGDark # Input box background
   input.foreground: *FG # Input box foreground
-  input.border: *BGLighter # Input box border
-  input.placeholderForeground: *COMMENT # Input box foreground color for placeholder text
+  input.border: *BGDarker # Input box border
+  input.placeholderForeground: *FG # Input box foreground color for placeholder text
   inputOption.activeBorder: *PURPLE # Border color of activated options in input fields
   inputValidation.infoForeground: # Input validation foreground color for information severity
   inputValidation.infoBackground: # Input validation background color for information severity
@@ -126,17 +126,17 @@ colors:
 
   # List & Trees
   list.activeSelectionBackground: *SELECTION # List/Tree background color for the selected item when the list/tree is active
-  list.activeSelectionForeground: *FG # List/Tree foreground color for the selected item when the list/tree is active
+  list.activeSelectionForeground: *FG_LIGHT # List/Tree foreground color for the selected item when the list/tree is active
   list.dropBackground: *SELECTION # List/Tree drag and drop background when moving items around using the mouse
   list.focusBackground: *LineHighlight # List/Tree background color for the focused item when the list/tree is active
   list.highlightForeground: *CYAN # List/Tree foreground color of the match highlights when searching inside the list/tree
   list.hoverBackground: *LineHighlight # List/Tree background when hovering over items using the mouse
   list.inactiveSelectionBackground: *LineHighlight # List/Tree background color for the selected item when the list/tree is inactive
-  list.inactiveSelectionForeground: # List/Tree foreground color for the selected item when the list/tree is inactive. An active list/tree has keyboard focus, an inactive does not
+  list.inactiveSelectionForeground: *FG_LIGHT # List/Tree foreground color for the selected item when the list/tree is inactive. An active list/tree has keyboard focus, an inactive does not
   list.warningForeground: *ORANGE # Color of warning decorations in the explorer
   list.errorForeground: *RED # Color of error decorations in the explorer
-  list.hoverForeground: # List/Tree foreground when hovering over items using the mouse
-  list.focusForeground: # List/Tree foreground color for the focused item when the list/tree is active. An active list/tree has keyboard focus, an inactive does not
+  list.hoverForeground: *FG_LIGHT # List/Tree foreground when hovering over items using the mouse
+  list.focusForeground: *FG_LIGHT # List/Tree foreground color for the focused item when the list/tree is active. An active list/tree has keyboard focus, an inactive does not
 
   # Activity Bar
   activityBar.background: *BG # Activity Bar background color
@@ -145,9 +145,9 @@ colors:
   activityBar.foreground: *FG # Activity bar foreground color (for example used for the icons)
   activityBar.border: # Activity Bar border color with the Side Bar
   activityBar.activeBorder: !alpha [*PINK, 80] # Activity Bar indicator color
-  activityBar.activeBackground: !alpha [*PURPLE, 10] # Activity Bar indicator background color
+  activityBar.activeBackground: # Activity Bar indicator background color
   activityBarBadge.background: *PINK # Activity notification badge background color
-  activityBarBadge.foreground: *FG # Activity notification badge foreground color
+  activityBarBadge.foreground: *BG # Activity notification badge foreground color
 
   # Side Bar
   sideBar.background: *BG # Side Bar background color
@@ -166,7 +166,7 @@ colors:
   editorGroupHeader.tabsBackground: *BG # Background color of the Tabs container
   editorGroupHeader.tabsBorder: # Border color of the editor group title header when tabs are enabled. Editor groups are the containers of editors
   tab.activeBackground: *BG # Active Tab background color
-  tab.activeForeground: *FG # Active Tab foreground color in an active group
+  tab.activeForeground: *FG_LIGHT # Active Tab foreground color in an active group
   tab.border: *BG # Border to separate Tabs from each other
   tab.activeBorderTop: !alpha [*PINK, 80] # A border drawn to the top of the active tab
   tab.activeBorder: # A border drawn to the bottom of the active tab
@@ -177,7 +177,7 @@ colors:
   tab.unfocusedInactiveForeground: # Inactive tab foreground color in an inactive editor group
 
   # Editor Colors
-  editor.foreground: *FG_EDITOR
+  editor.foreground: *FG_LIGHT
   editor.background: *BG
   editorLineNumber.foreground: *COMMENT
   editorCursor.foreground:
@@ -312,7 +312,7 @@ colors:
   panel.background: *BG # Panel background color
   panel.border: *PURPLE # Panel border color on the top separating to the editor
   panelTitle.activeBorder: *PINK # Border color for the active panel title
-  panelTitle.activeForeground: *FG # Title color for the active panel
+  panelTitle.activeForeground: *FG_LIGHT # Title color for the active panel
   panelTitle.inactiveForeground: *COMMENT # Title color for the inactive panel
 
   # Status Bar Colors
@@ -337,7 +337,7 @@ colors:
   titleBar.inactiveForeground: *COMMENT # Title Bar foreground when the window is inactive
 
   # Extensions
-  extensionButton.prominentForeground: *FG # Extension view button foreground color (for example Install button)
+  extensionButton.prominentForeground: *BG # Extension view button foreground color (for example Install button)
   extensionButton.prominentBackground: !alpha [*GREEN, 90] # Extension view button background color
   extensionButton.prominentHoverBackground: !alpha [*GREEN, 60] # Extension view button background hover color
 
@@ -998,7 +998,7 @@ tokenColors:
       - variable.other.constant.ts # Fixes incorrect highlighting of pseudo-constants in ts
       - variable.other.constant.tsx # Fixes incorrect highlighting of pseudo-constants in tsx
     settings:
-      foreground: *FG_EDITOR
+      foreground: *FG_LIGHT
 
   - name: Destructuring / aliasing reference name (LHS)
     scope:
@@ -1015,7 +1015,7 @@ tokenColors:
       - meta.variable.assignment.destructured.object.coffee variable variable # Object destructuring variable (coffeescript)
     settings:
       fontStyle: normal
-      foreground: *FG_EDITOR
+      foreground: *FG_LIGHT
 
   # =============================================================================
   # Language Extensions / Edge Cases
@@ -1033,7 +1033,7 @@ tokenColors:
     scope:
       - meta.selectionset.graphql meta.arguments variable
     settings:
-      foreground: *FG_EDITOR
+      foreground: *FG_LIGHT
 
   - name: GraphQL fragment name (definition)
     scope:
@@ -1060,7 +1060,7 @@ tokenColors:
       - punctuation.separator.list.comma.css # Commas separating selectors in CSS
       - constant.language.empty-list.haskell
     settings:
-      foreground: *FG_EDITOR
+      foreground: *FG_LIGHT
 
   # This is set to conform to the standard of coloring langage constants purple.
   # In this case, this colors "$?", "$@", "$*", "$1", etc..
