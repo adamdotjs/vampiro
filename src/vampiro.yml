@@ -6,16 +6,23 @@ vampiro:
   base:
     - &BG "#282A36"
     - &FG "#93938E"
-    - &FG_LIGHT "#BEBEB9"
+    - &FG_LIGHT "#C4C4BE"
     - &SELECTION "#444653"
     - &COMMENT "#6E7392"
-    - &CYAN "#8BE9FD"
-    - &GREEN "#50FA7B"
-    - &ORANGE "#FFB86C"
-    - &PINK "#FF79C6"
-    - &PURPLE "#BD93F9"
-    - &RED "#FF5555"
-    - &YELLOW "#F1FA8C"
+    # - &CYAN "#8BE9FD"
+    # - &GREEN "#50FA7B"
+    # - &ORANGE "#FFB86C"
+    # - &PINK "#FF79C6"
+    # - &PURPLE "#BD93F9"
+    # - &RED "#FF5555"
+    # - &YELLOW "#F1FA8C"
+    - &CYAN "#5ad8c5"
+    - &GREEN "#90ca87"
+    - &ORANGE "#d5a86a"
+    - &PINK "#e78cb7"
+    - &PURPLE "#9f8fd8"
+    - &RED "#db8675"
+    - &YELLOW "#d7d586"
   ansi:
     - &COLOR0 "#20222D"
     - &COLOR1 "#FF5555"
@@ -35,8 +42,10 @@ vampiro:
     - &COLOR15 "#CCCCC6"
   brightOther:
     # Temporary (awaiting fix)
+    # - &TEMP_QUOTES "#E9F284"
+    # - &TEMP_PROPERTY_QUOTES "#8BE9FE"
     - &TEMP_QUOTES "#E9F284"
-    - &TEMP_PROPERTY_QUOTES "#8BE9FE"
+    - &TEMP_PROPERTY_QUOTES "#5ad8c5"
   other:
     - &LineHighlight "#44465375"
     - &NonText "#CCCCC61A"
@@ -82,8 +91,8 @@ colors:
   errorForeground: *RED # Overall foreground color for error messages (this color is only used if not overridden by a component)
 
   # Button Control
-  button.background: *SELECTION # Button background color
-  button.foreground: *FG # Button foreground color
+  button.background: *COMMENT # Button background color
+  button.foreground: *BG # Button foreground color
   button.border: # Button border color
   button.hoverBackground: # Button background color when hovering
   button.secondaryBackground: *BG # Secondary button background color.
@@ -93,12 +102,12 @@ colors:
   # Dropdown Control
   dropdown.background: *BGLight # Dropdown background
   dropdown.border: *BGDarker # Dropdown border
-  dropdown.foreground: *FG # Dropdown foreground
+  dropdown.foreground: *FG_LIGHT # Dropdown foreground
 
   # Input Control
-  input.background: *BGDark # Input box background
+  input.background: *BGLight # Input box background
   input.foreground: *FG # Input box foreground
-  input.border: *BGDarker # Input box border
+  input.border: *SELECTION # Input box border
   input.placeholderForeground: *FG # Input box foreground color for placeholder text
   inputOption.activeBorder: *PURPLE # Border color of activated options in input fields
   inputValidation.infoForeground: # Input validation foreground color for information severity
@@ -175,6 +184,7 @@ colors:
   tab.inactiveForeground: *COMMENT # Inactive Tab foreground color in an active group
   tab.unfocusedActiveForeground: # Active tab foreground color in an inactive editor group
   tab.unfocusedInactiveForeground: # Inactive tab foreground color in an inactive editor group
+  tab.hoverForeground: *FG_LIGHT
 
   # Editor Colors
   editor.foreground: *FG_LIGHT
@@ -357,18 +367,18 @@ colors:
   settings.headerForeground: *FG # The foreground color for a section header or active title
   settings.modifiedItemIndicator: *ORANGE # The color of the line that indicates a modified setting
   settings.inactiveSelectedItemBorder: # The color of the selected setting row border, when the settings list does not have focus
-  settings.dropdownBackground: *BGDark # Dropdown background
-  settings.dropdownForeground: *FG # Dropdown foreground
-  settings.dropdownBorder: *BGDarker # Dropdown border
-  settings.checkboxBackground: *BGDark # Checkbox background
-  settings.checkboxForeground: *FG # Checkbox foreground
-  settings.checkboxBorder: *BGDarker # Checkbox border
-  settings.textInputBackground: *BGDark # Text input box background
-  settings.textInputForeground: *FG # Text input box foreground
-  settings.textInputBorder: *BGDarker # Text input box border
-  settings.numberInputBackground: *BGDark # Number input box background
-  settings.numberInputForeground: *FG # Number input box foreground
-  settings.numberInputBorder: *BGDarker # Number input box border
+  settings.dropdownBackground: *BGLight # Dropdown background
+  settings.dropdownForeground: *FG_LIGHT # Dropdown foreground
+  settings.dropdownBorder: *SELECTION # Dropdown border
+  settings.checkboxBackground: *BGLight # Checkbox background
+  settings.checkboxForeground: *FG_LIGHT # Checkbox foreground
+  settings.checkboxBorder: *SELECTION # Checkbox border
+  settings.textInputBackground: *BGLight # Text input box background
+  settings.textInputForeground: *FG_LIGHT # Text input box foreground
+  settings.textInputBorder: *SELECTION # Text input box border
+  settings.numberInputBackground: *BGLight # Number input box background
+  settings.numberInputForeground: *FG_LIGHT # Number input box foreground
+  settings.numberInputBorder: *SELECTION # Number input box border
 
   # Breadcrumbs
   breadcrumb.foreground: *COMMENT # Color of breadcrumb items
@@ -429,7 +439,7 @@ tokenColors:
   - scope:
       - invalid.deprecated
     settings:
-      foreground: *FG
+      foreground: *FG_LIGHT
       fontStyle: underline
   - scope:
       - entity.name.filename
@@ -540,7 +550,7 @@ tokenColors:
       - meta.paragraph.markdown punctuation.definition.string.begin
       - meta.paragraph.markdown punctuation.definition.string.end
     settings:
-      foreground: *FG
+      foreground: *FG_LIGHT
 
   - name: Braces in markdown blockquotes
     scope:
@@ -801,7 +811,7 @@ tokenColors:
       - string.template meta.brace
       - string.template punctuation.accessor
     settings:
-      foreground: *FG
+      foreground: *FG_LIGHT
 
   - name: Variable interpolation operators
     scope:
@@ -1094,7 +1104,7 @@ tokenColors:
       - punctuation.definition.attribute-selector.end.bracket.square.scss
       - punctuation.definition.attribute-selector.begin.bracket.square.scss
     settings:
-      foreground: *FG
+      foreground: *FG_LIGHT
 
   - name: Haskell Pragmas
     scope:
