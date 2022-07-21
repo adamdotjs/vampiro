@@ -4,55 +4,55 @@ semanticClass: theme.vampiro
 semanticHighlighting: true
 vampiro:
   base:
-    - &BG "#2e2933"
-    - &FG "#B2A89D"
-    - &FGLight "#C6BDBA"
-    - &SELECTION "#686F6D"
-    - &COMMENT "#7A837A"
-    - &CYAN "#54b4c7"
-    - &GREEN "#7dc285"
-    - &ORANGE "#d8a571"
-    - &PINK "#c686a8"
-    - &PURPLE "#aa98c1"
-    - &RED "#d48078"
-    - &YELLOW "#b2b582"
+    - &BG "#282A36"
+    - &FG "#999"
+    - &FG_EDITOR "#CCC"
+    - &SELECTION "#44475A"
+    - &COMMENT "#6272A4"
+    - &CYAN "#8BE9FD"
+    - &GREEN "#50FA7B"
+    - &ORANGE "#FFB86C"
+    - &PINK "#FF79C6"
+    - &PURPLE "#BD93F9"
+    - &RED "#FF5555"
+    - &YELLOW "#F1FA8C"
   ansi:
-    - &COLOR0 "#45494C"
-    - &COLOR1 "#d48078"
-    - &COLOR2 "#7dc285"
-    - &COLOR3 "#b2b582"
-    - &COLOR4 "#aa98c1"
-    - &COLOR5 "#c686a8"
-    - &COLOR6 "#54b4c7"
-    - &COLOR7 "#C6BDBA"
-    - &COLOR8 "#7A837A"
+    - &COLOR0 "#21222C"
+    - &COLOR1 "#FF5555"
+    - &COLOR2 "#50FA7B"
+    - &COLOR3 "#F1FA8C"
+    - &COLOR4 "#BD93F9"
+    - &COLOR5 "#FF79C6"
+    - &COLOR6 "#8BE9FD"
+    - &COLOR7 "#F8F8F2"
+    - &COLOR8 "#6272A4"
     - &COLOR9 "#FF6E6E"
     - &COLOR10 "#69FF94"
     - &COLOR11 "#FFFFA5"
     - &COLOR12 "#D6ACFF"
     - &COLOR13 "#FF92DF"
     - &COLOR14 "#A4FFFF"
-    - &COLOR15 "#C6BDBA"
+    - &COLOR15 "#FFFFFF"
   brightOther:
     # Temporary (awaiting fix)
     - &TEMP_QUOTES "#E9F284"
     - &TEMP_PROPERTY_QUOTES "#8BE9FE"
   other:
-    - &LineHighlight "#686F6D75"
-    - &NonText "#C6BDBA1A"
-    - &WHITE "#C6BDBA"
-    - &TAB_DROP_BG "#686F6D70"
+    - &LineHighlight "#44475A75"
+    - &NonText "#FFFFFF1A"
+    - &WHITE "#FFFFFF"
+    - &TAB_DROP_BG "#44475A70"
     # UI Variants
-    - &BGLighter "#45494C"
-    - &BGLight "#35363C" # HSV (230   , 25.71, 27.45)
-    - &BGDark "#45494C" # HSV (234.55, 25   , 17.25)
-    - &BGDarker "#35363C" # HSV (234.55, 25   , 13   )
+    - &BGLighter "#424450"
+    - &BGLight "#343746" # HSV (230   , 25.71, 27.45)
+    - &BGDark "#21222C" # HSV (234.55, 25   , 17.25)
+    - &BGDarker "#191A21" # HSV (234.55, 25   , 13   )
 
 # User Interface (more info: https://code.visualstudio.com/docs/getstarted/theme-color-reference)
 colors:
   # Integrated Terminal Colors
   terminal.background: *BG
-  terminal.foreground: *FGLight
+  terminal.foreground: *FG
   terminal.ansiBrightBlack: *COLOR8
   terminal.ansiBrightRed: *COLOR9
   terminal.ansiBrightGreen: *COLOR10
@@ -96,10 +96,10 @@ colors:
   dropdown.foreground: *FG # Dropdown foreground
 
   # Input Control
-  input.background: *BGLight # Input box background
-  input.foreground: *FGLight # Input box foreground
-  input.border: # Input box border
-  input.placeholderForeground: *FG # Input box foreground color for placeholder text
+  input.background: *BG # Input box background
+  input.foreground: *FG # Input box foreground
+  input.border: *BGLighter # Input box border
+  input.placeholderForeground: *COMMENT # Input box foreground color for placeholder text
   inputOption.activeBorder: *PURPLE # Border color of activated options in input fields
   inputValidation.infoForeground: # Input validation foreground color for information severity
   inputValidation.infoBackground: # Input validation background color for information severity
@@ -145,7 +145,7 @@ colors:
   activityBar.foreground: *FG # Activity bar foreground color (for example used for the icons)
   activityBar.border: # Activity Bar border color with the Side Bar
   activityBar.activeBorder: !alpha [*PINK, 80] # Activity Bar indicator color
-  activityBar.activeBackground: # Activity Bar indicator background color
+  activityBar.activeBackground: !alpha [*PURPLE, 10] # Activity Bar indicator background color
   activityBarBadge.background: *PINK # Activity notification badge background color
   activityBarBadge.foreground: *FG # Activity notification badge foreground color
 
@@ -168,25 +168,24 @@ colors:
   tab.activeBackground: *BG # Active Tab background color
   tab.activeForeground: *FG # Active Tab foreground color in an active group
   tab.border: *BG # Border to separate Tabs from each other
-  tab.activeBorderTop: *PINK # A border drawn to the top of the active tab
+  tab.activeBorderTop: !alpha [*PINK, 80] # A border drawn to the top of the active tab
   tab.activeBorder: # A border drawn to the bottom of the active tab
   tab.unfocusedActiveBorder: # A border drawn to the bottom of the active tab in an editor group that is not focused
   tab.inactiveBackground: *BG # Inactive Tab background color
   tab.inactiveForeground: *COMMENT # Inactive Tab foreground color in an active group
   tab.unfocusedActiveForeground: # Active tab foreground color in an inactive editor group
   tab.unfocusedInactiveForeground: # Inactive tab foreground color in an inactive editor group
-  tab.hoverForeground: *FG # Hover foreground color
 
   # Editor Colors
-  editor.foreground: *FGLight
+  editor.foreground: *FG_EDITOR
   editor.background: *BG
-  editorLineNumber.foreground: *BGDark
+  editorLineNumber.foreground: *COMMENT
   editorCursor.foreground:
 
   editor.selectionBackground: *SELECTION # Color of the editor selection
   editor.selectionHighlightBackground: *BGLighter # Color for regions with the same content as the selection
   editor.inactiveSelectionBackground: # Color of the selection in an inactive editor
-  editor.foldBackground: !alpha [*BGDark, 80] # Background color for folded ranges
+  editor.foldBackground: *BGDark # Background color for folded ranges
 
   editor.wordHighlightBackground: !alpha [*CYAN, 50] # Background color of a symbol during read-access, for example when reading a variable
   editor.wordHighlightStrongBackground: !alpha [*GREEN, 50] # Background color of a symbol during write-access, for example when writing to a variable
@@ -221,7 +220,7 @@ colors:
   editorBracketMatch.background: # Background color behind matching brackets
   editorBracketMatch.border: # Color for matching brackets boxes
 
-  editorBracketHighlight.foreground1: *FGLight # Color of first pair of brackets
+  editorBracketHighlight.foreground1: *FG # Color of first pair of brackets
   editorBracketHighlight.foreground2: *PINK # Color of second pair of brackets
   editorBracketHighlight.foreground3: *CYAN # Color of third pair of brackets
   editorBracketHighlight.foreground4: *GREEN # Color of fourth pair of brackets
@@ -311,7 +310,7 @@ colors:
 
   # Panel Colors
   panel.background: *BG # Panel background color
-  panel.border: *BG # Panel border color on the top separating to the editor
+  panel.border: *PURPLE # Panel border color on the top separating to the editor
   panelTitle.activeBorder: *PINK # Border color for the active panel title
   panelTitle.activeForeground: *FG # Title color for the active panel
   panelTitle.inactiveForeground: *COMMENT # Title color for the inactive panel
@@ -430,7 +429,7 @@ tokenColors:
   - scope:
       - invalid.deprecated
     settings:
-      foreground: *FGLight
+      foreground: *FG
       fontStyle: underline
   - scope:
       - entity.name.filename
@@ -541,7 +540,7 @@ tokenColors:
       - meta.paragraph.markdown punctuation.definition.string.begin
       - meta.paragraph.markdown punctuation.definition.string.end
     settings:
-      foreground: *FGLight
+      foreground: *FG
 
   - name: Braces in markdown blockquotes
     scope:
@@ -798,12 +797,11 @@ tokenColors:
       - punctuation.definition.type.end
       - punctuation.section.scope.begin
       - punctuation.section.scope.end
-      - punctuation.terminator.expression.php
       - storage.type.generic.java
       - string.template meta.brace
       - string.template punctuation.accessor
     settings:
-      foreground: *FGLight
+      foreground: *FG
 
   - name: Variable interpolation operators
     scope:
@@ -859,6 +857,7 @@ tokenColors:
       - meta.interface-or-protocol storage.type.objc
       - source.groovy storage.type.def
     settings:
+      fontStyle: regular
       foreground: *PINK
 
   - name: Types
@@ -999,11 +998,12 @@ tokenColors:
       - variable.other.constant.ts # Fixes incorrect highlighting of pseudo-constants in ts
       - variable.other.constant.tsx # Fixes incorrect highlighting of pseudo-constants in tsx
     settings:
-      foreground: *FGLight
+      foreground: *FG_EDITOR
 
   - name: Destructuring / aliasing reference name (LHS)
     scope:
       - meta.import variable.other.readwrite # Module import aliasing (real name)
+      - meta.object-binding-pattern-variable variable.object.property # Object destructuring property
       - meta.variable.assignment.destructured.object.coffee variable # Object destructuring property (coffeescript)
     settings:
       foreground: *ORANGE
@@ -1014,7 +1014,8 @@ tokenColors:
       - meta.export variable.other.readwrite.alias # Module import aliasing (alias name)
       - meta.variable.assignment.destructured.object.coffee variable variable # Object destructuring variable (coffeescript)
     settings:
-      foreground: *FGLight
+      fontStyle: normal
+      foreground: *FG_EDITOR
 
   # =============================================================================
   # Language Extensions / Edge Cases
@@ -1032,7 +1033,7 @@ tokenColors:
     scope:
       - meta.selectionset.graphql meta.arguments variable
     settings:
-      foreground: *FGLight
+      foreground: *FG_EDITOR
 
   - name: GraphQL fragment name (definition)
     scope:
@@ -1059,7 +1060,7 @@ tokenColors:
       - punctuation.separator.list.comma.css # Commas separating selectors in CSS
       - constant.language.empty-list.haskell
     settings:
-      foreground: *FGLight
+      foreground: *FG_EDITOR
 
   # This is set to conform to the standard of coloring langage constants purple.
   # In this case, this colors "$?", "$@", "$*", "$1", etc..
@@ -1073,6 +1074,7 @@ tokenColors:
     scope:
       - support.constant
     settings:
+      fontStyle: normal
       foreground: *PURPLE
 
   - name: Makefile prerequisite names
@@ -1092,7 +1094,7 @@ tokenColors:
       - punctuation.definition.attribute-selector.end.bracket.square.scss
       - punctuation.definition.attribute-selector.begin.bracket.square.scss
     settings:
-      foreground: *FGLight
+      foreground: *FG
 
   - name: Haskell Pragmas
     scope:
@@ -1105,9 +1107,11 @@ tokenColors:
       - log.error
     settings:
       foreground: *RED
+      fontStyle: bold
 
   - name: Log file warning
     scope:
       - log.warning
     settings:
       foreground: *YELLOW
+      fontStyle: bold
