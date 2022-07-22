@@ -5,8 +5,8 @@ semanticHighlighting: true
 vampiro:
   base:
     - &BG "#21222E"
-    - &FG "#83837d"
-    - &FG_LIGHT "#b9b9b4"
+    - &FG "#878897"
+    - &FG_LIGHT "#bbbdcd"
     - &SELECTION "#3d3f4c"
     - &COMMENT "#676c8b"
     # - &CYAN "#8BE9FD"
@@ -19,8 +19,8 @@ vampiro:
     - &CYAN "#7fc3b6"
     - &GREEN "#7fbe76"
     - &ORANGE "#bfa076"
-    - &PINK "#e196b8"
-    - &PURPLE "#9b8bd7"
+    - &PINK "#db90b2"
+    - &PURPLE "#9f8eda"
     - &RED "#c28476"
     - &YELLOW "#c7c57e"
   ansi:
@@ -31,7 +31,7 @@ vampiro:
     - &COLOR4 "#BD93F9"
     - &COLOR5 "#FF79C6"
     - &COLOR6 "#8BE9FD"
-    - &COLOR7 "#83837d"
+    - &COLOR7 "#878897"
     - &COLOR8 "#6E7392"
     - &COLOR9 "#FF6E6E"
     - &COLOR10 "#69FF94"
