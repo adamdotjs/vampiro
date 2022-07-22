@@ -4,11 +4,11 @@ semanticClass: theme.vampiro
 semanticHighlighting: true
 vampiro:
   base:
-    - &BG "#282A36"
-    - &FG "#93938E"
-    - &FG_LIGHT "#C4C4BE"
-    - &SELECTION "#444653"
-    - &COMMENT "#6E7392"
+    - &BG "#21222E"
+    - &FG "#83837d"
+    - &FG_LIGHT "#b9b9b4"
+    - &SELECTION "#3d3f4c"
+    - &COMMENT "#676c8b"
     # - &CYAN "#8BE9FD"
     # - &GREEN "#50FA7B"
     # - &ORANGE "#FFB86C"
@@ -16,22 +16,22 @@ vampiro:
     # - &PURPLE "#BD93F9"
     # - &RED "#FF5555"
     # - &YELLOW "#F1FA8C"
-    - &CYAN "#5ad8c5"
-    - &GREEN "#90ca87"
-    - &ORANGE "#d5a86a"
-    - &PINK "#e78cb7"
-    - &PURPLE "#9f8fd8"
-    - &RED "#db8675"
-    - &YELLOW "#d7d586"
+    - &CYAN "#7fc3b6"
+    - &GREEN "#7fbe76"
+    - &ORANGE "#bfa076"
+    - &PINK "#e196b8"
+    - &PURPLE "#9b8bd7"
+    - &RED "#c28476"
+    - &YELLOW "#c7c57e"
   ansi:
-    - &COLOR0 "#20222D"
+    - &COLOR0 "#181a25"
     - &COLOR1 "#FF5555"
     - &COLOR2 "#50FA7B"
     - &COLOR3 "#F1FA8C"
     - &COLOR4 "#BD93F9"
     - &COLOR5 "#FF79C6"
     - &COLOR6 "#8BE9FD"
-    - &COLOR7 "#93938E"
+    - &COLOR7 "#83837d"
     - &COLOR8 "#6E7392"
     - &COLOR9 "#FF6E6E"
     - &COLOR10 "#69FF94"
@@ -39,23 +39,23 @@ vampiro:
     - &COLOR12 "#D6ACFF"
     - &COLOR13 "#FF92DF"
     - &COLOR14 "#A4FFFF"
-    - &COLOR15 "#CCCCC6"
+    - &COLOR15 "#bfbfba"
   brightOther:
     # Temporary (awaiting fix)
     # - &TEMP_QUOTES "#E9F284"
     # - &TEMP_PROPERTY_QUOTES "#8BE9FE"
     - &TEMP_QUOTES "#E9F284"
-    - &TEMP_PROPERTY_QUOTES "#5ad8c5"
+    - &TEMP_PROPERTY_QUOTES "#7fc3b6"
   other:
     - &LineHighlight "#44465375"
     - &NonText "#CCCCC61A"
-    - &WHITE "#CCCCC6"
+    - &WHITE "#bfbfba"
     - &TAB_DROP_BG "#44465370"
     # UI Variants
-    - &BGLighter "#393B48"
-    - &BGLight "#333441" #
-    - &BGDark "#20222D" #
-    - &BGDarker "#191B26"
+    - &BGLighter "#323441"
+    - &BGLight "#292b37" #
+    - &BGDark "#181a25" #
+    - &BGDarker "#0e101c"
 
 # User Interface (more info: https://code.visualstudio.com/docs/getstarted/theme-color-reference)
 colors:
@@ -320,7 +320,7 @@ colors:
 
   # Panel Colors
   panel.background: *BG # Panel background color
-  panel.border: *PURPLE # Panel border color on the top separating to the editor
+  panel.border: *BG # Panel border color on the top separating to the editor
   panelTitle.activeBorder: *PINK # Border color for the active panel title
   panelTitle.activeForeground: *FG_LIGHT # Title color for the active panel
   panelTitle.inactiveForeground: *COMMENT # Title color for the inactive panel
