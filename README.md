@@ -4,7 +4,7 @@ A darkened, frameless variant of [Dracula](https://marketplace.visualstudio.com/
 
 \
 \
-![Screenshot](./screenshot.png)
+![Screenshot](screenshot.png)
 
 ## License
 

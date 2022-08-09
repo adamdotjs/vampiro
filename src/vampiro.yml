@@ -4,39 +4,39 @@ semanticClass: theme.vampiro
 semanticHighlighting: true
 vampiro:
   base:
-    - &BG "#181b29"
+    - &BG "#191C2A"
     - &FG "#8690B6"
     - &FG_LIGHT "#CFD3E2"
     - &SELECTION "#414A6C"
     - &COMMENT "#5A6695"
-    - &CYAN "#1EC9E4"
-    - &GREEN "#1DE167"
-    - &ORANGE "#FF9D37"
-    - &PINK "#FF49A4"
-    - &PURPLE "#E670FF"
-    - &RED "#FE3E49"
-    - &YELLOW "#E8EC52"
+    - &CYAN "#09CFEC"
+    - &GREEN "#12DE5E"
+    - &ORANGE "#F7A444"
+    - &PINK "#FB5DBC"
+    - &PURPLE "#B383FA"
+    - &RED "#FD3744"
+    - &YELLOW "#E0EE5E"
   ansi:
     - &COLOR0 "#11141D"
-    - &COLOR1 "#FE3E49"
-    - &COLOR2 "#1DE167"
-    - &COLOR3 "#E8EC52"
-    - &COLOR4 "#E670FF"
-    - &COLOR5 "#FF49A4"
-    - &COLOR6 "#1EC9E4"
+    - &COLOR1 "#FD3744"
+    - &COLOR2 "#12DE5E"
+    - &COLOR3 "#E0EE5E"
+    - &COLOR4 "#B383FA"
+    - &COLOR5 "#FB5DBC"
+    - &COLOR6 "#09CFEC"
     - &COLOR7 "#8690B6"
     - &COLOR8 "#5A6695"
-    - &COLOR9 "#FF625F"
-    - &COLOR10 "#3AEF74"
-    - &COLOR11 "#F8F987"
-    - &COLOR12 "#EE96FE"
-    - &COLOR13 "#FE6BAF"
-    - &COLOR14 "#3AD7F3"
+    - &COLOR9 "#FD6871"
+    - &COLOR10 "#34EF7A"
+    - &COLOR11 "#E9F38C"
+    - &COLOR12 "#D2B5FC"
+    - &COLOR13 "#FC8DD0"
+    - &COLOR14 "#31DEF7"
     - &COLOR15 "#DFE2EC"
   brightOther:
     # Temporary (awaiting fix)
-    - &TEMP_QUOTES "#E8EC52"
-    - &TEMP_PROPERTY_QUOTES "#1EC9E4"
+    - &TEMP_QUOTES "#E0EE5E"
+    - &TEMP_PROPERTY_QUOTES "#09CFEC"
   other:
     - &LineHighlight "#414A6C75"
     - &NonText "#DFE2EC1A"
@@ -137,6 +137,7 @@ colors:
   list.errorForeground: *RED # Color of error decorations in the explorer
   list.hoverForeground: *FG_LIGHT # List/Tree foreground when hovering over items using the mouse
   list.focusForeground: *FG_LIGHT # List/Tree foreground color for the focused item when the list/tree is active. An active list/tree has keyboard focus, an inactive does not
+  tree.indentGuidesStroke: *SELECTION # Highlight color for active indent guide on list/trees.
 
   # Activity Bar
   activityBar.background: *BG # Activity Bar background color
@@ -186,7 +187,7 @@ colors:
   editor.selectionBackground: *SELECTION # Color of the editor selection
   editor.selectionHighlightBackground: *BGLighter # Color for regions with the same content as the selection
   editor.inactiveSelectionBackground: # Color of the selection in an inactive editor
-  editor.foldBackground: *BGDark # Background color for folded ranges
+  editor.foldBackground: *BGLight # Background color for folded ranges
 
   editor.wordHighlightBackground: !alpha [*CYAN, 50] # Background color of a symbol during read-access, for example when reading a variable
   editor.wordHighlightStrongBackground: !alpha [*GREEN, 50] # Background color of a symbol during write-access, for example when writing to a variable
@@ -208,10 +209,10 @@ colors:
   editor.snippetFinalTabstopHighlightBackground: *BG # Highlight background color of the final tabstop of a snippet
   editor.snippetFinalTabstopHighlightBorder: *GREEN # Highlight border color of the final tabstop of a snippet
 
-  editorWhitespace.foreground: *NonText # Color of whitespace characters in the editor
-  editorIndentGuide.background: *NonText # Color of the editor indentation guides
-  editorIndentGuide.activeBackground: !alpha [*WHITE, 45] # Color of the active indentation guide
-  editorRuler.foreground: *NonText # Color of the editor rulers
+  editorWhitespace.foreground: *BGLighter # Color of whitespace characters in the editor
+  editorIndentGuide.background: *BGLighter # Color of the editor indentation guides
+  editorIndentGuide.activeBackground: *SELECTION # Color of the active indentation guide
+  editorRuler.foreground: *BGLighter # Color of the editor rulers
 
   editorCodeLens.foreground: *COMMENT # Foreground color of an editor CodeLens
 
