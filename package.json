@@ -6,6 +6,7 @@
 	"engines": {
 		"vscode": "^1.69.0"
 	},
+	"publisher": "adamdotjs",
 	"categories": [
 		"Themes"
 	],
@@ -15,7 +16,7 @@
 		"theme",
 		"color theme",
 		"vibrant theme",
-		"neon colors",
+		"neon",
 		"vampire",
 		"bright theme"
 	],
