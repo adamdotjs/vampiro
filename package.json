@@ -1,7 +1,7 @@
 {
 	"name": "vampiro",
 	"displayName": "Vampiro",
-	"description": "A darker, more vibrant version of Dracula.",
+	"description": "A dark, vibrant version of Dracula.",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.69.0"
