@@ -4,58 +4,49 @@ semanticClass: theme.vampiro
 semanticHighlighting: true
 vampiro:
   base:
-    - &BG "#161925"
-    - &FG "#878897"
-    - &FG_LIGHT "#d6d8e7"
-    - &SELECTION "#3d3f4c"
-    - &COMMENT "#676c8b"
-    # - &CYAN "#8BE9FD"
-    # - &GREEN "#50FA7B"
-    # - &ORANGE "#FFB86C"
-    # - &PINK "#FF79C6"
-    # - &PURPLE "#BD93F9"
-    # - &RED "#FF5555"
-    # - &YELLOW "#F1FA8C"
-    - &CYAN "#07C3F2"
-    - &GREEN "#21D789"
-    - &ORANGE "#FDB60D"
-    - &PINK "#FF318C"
-    - &PURPLE "#FF45ED"
-    - &RED "#FE2857"
-    - &YELLOW "#FCF84A"
+    - &BG "#181b29"
+    - &FG "#8690B6"
+    - &FG_LIGHT "#CFD3E2"
+    - &SELECTION "#414A6C"
+    - &COMMENT "#5A6695"
+    - &CYAN "#1EC9E4"
+    - &GREEN "#24E469"
+    - &ORANGE "#FF9D37"
+    - &PINK "#FF49A4"
+    - &PURPLE "#E670FF"
+    - &RED "#FE3E49"
+    - &YELLOW "#E4F941"
   ansi:
-    - &COLOR0 "#181a25"
-    - &COLOR1 "#FE2857"
-    - &COLOR2 "#21D789"
-    - &COLOR3 "#FCF84A"
-    - &COLOR4 "#FF45ED"
-    - &COLOR5 "#FF318C"
-    - &COLOR6 "#07C3F2"
-    - &COLOR7 "#878897"
-    - &COLOR8 "#6E7392"
-    - &COLOR9 "#FF6E6E"
-    - &COLOR10 "#69FF94"
-    - &COLOR11 "#FFFFA5"
-    - &COLOR12 "#D6ACFF"
-    - &COLOR13 "#FF92DF"
-    - &COLOR14 "#A4FFFF"
-    - &COLOR15 "#bfbfba"
+    - &COLOR0 "#11141D"
+    - &COLOR1 "#FE3E49"
+    - &COLOR2 "#24E469"
+    - &COLOR3 "#E4F941"
+    - &COLOR4 "#E670FF"
+    - &COLOR5 "#FF49A4"
+    - &COLOR6 "#1EC9E4"
+    - &COLOR7 "#8690B6"
+    - &COLOR8 "#5A6695"
+    - &COLOR9 "#FF625F"
+    - &COLOR10 "#3EF276"
+    - &COLOR11 "#F3FE81"
+    - &COLOR12 "#EE96FE"
+    - &COLOR13 "#FE6BAF"
+    - &COLOR14 "#3AD7F3"
+    - &COLOR15 "#DFE2EC"
   brightOther:
     # Temporary (awaiting fix)
-    # - &TEMP_QUOTES "#E9F284"
-    # - &TEMP_PROPERTY_QUOTES "#8BE9FE"
-    - &TEMP_QUOTES "#e5e3a4"
-    - &TEMP_PROPERTY_QUOTES "#84e1d1"
+    - &TEMP_QUOTES "#E4F941"
+    - &TEMP_PROPERTY_QUOTES "#1EC9E4"
   other:
-    - &LineHighlight "#44465375"
-    - &NonText "#CCCCC61A"
-    - &WHITE "#bfbfba"
-    - &TAB_DROP_BG "#44465370"
+    - &LineHighlight "#414A6C75"
+    - &NonText "#DFE2EC1A"
+    - &WHITE "#DFE2EC"
+    - &TAB_DROP_BG "#414A6C70"
     # UI Variants
-    - &BGLighter "#323441"
-    - &BGLight "#292b37" #
-    - &BGDark "#181a25" #
-    - &BGDarker "#0e101c"
+    - &BGLighter "#2E344C"
+    - &BGLight "#232739" #
+    - &BGDark "#11141D" #
+    - &BGDarker "#0A0B10"
 
 # User Interface (more info: https://code.visualstudio.com/docs/getstarted/theme-color-reference)
 colors:
@@ -92,9 +83,9 @@ colors:
 
   # Button Control
   button.background: *COMMENT # Button background color
-  button.foreground: *BG # Button foreground color
+  button.foreground: *FG_LIGHT # Button foreground color
   button.border: # Button border color
-  button.hoverBackground: # Button background color when hovering
+  button.hoverBackground: *SELECTION # Button background color when hovering
   button.secondaryBackground: *BG # Secondary button background color.
   button.secondaryForeground: *FG # Secondary button foreground color.
   button.secondaryHoverBackground: *BGLight # Secondary button background color when hovering.
@@ -177,8 +168,8 @@ colors:
   tab.activeBackground: *BG # Active Tab background color
   tab.activeForeground: *FG_LIGHT # Active Tab foreground color in an active group
   tab.border: *BG # Border to separate Tabs from each other
-  tab.activeBorderTop: !alpha [*PINK, 80] # A border drawn to the top of the active tab
-  tab.activeBorder: # A border drawn to the bottom of the active tab
+  tab.activeBorderTop: # A border drawn to the top of the active tab
+  tab.activeBorder: *PINK # A border drawn to the bottom of the active tab
   tab.unfocusedActiveBorder: # A border drawn to the bottom of the active tab in an editor group that is not focused
   tab.inactiveBackground: *BG # Inactive Tab background color
   tab.inactiveForeground: *COMMENT # Inactive Tab foreground color in an active group
@@ -388,7 +379,7 @@ colors:
   breadcrumbPicker.background: *BGDarker # Background color of breadcrumb item picker
 
   # Misc
-  menu.separatorBackground: # Color of a separator menu item in menus
+  menu.separatorBackground: *BGLighter # Color of a separator menu item in menus
   listFilterWidget.background: *BGLight # Background color of the type filter widget in lists and trees.
   listFilterWidget.outline: *BGLighter # Outline color of the type filter widget in lists and trees.
   listFilterWidget.noMatchesOutline: *RED # Outline color of the type filter widget in lists and trees, when there are no matches.

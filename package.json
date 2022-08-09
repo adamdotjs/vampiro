@@ -1,7 +1,7 @@
 {
 	"name": "vampiro",
 	"displayName": "Vampiro",
-	"description": "A minimal, distraction-free color theme based on Dracula",
+	"description": "A vibrant, frameless dark variant of Dracula",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.69.0"
@@ -9,6 +9,25 @@
 	"categories": [
 		"Themes"
 	],
+	"keywords": [
+		"dracula",
+		"dark",
+		"theme",
+		"color theme",
+		"vibrant theme",
+		"neon colors",
+		"vampire",
+		"bright theme"
+	],
+	"icon": "icon.png",
+	"galleryBanner": {
+		"color": "#161925",
+		"theme": "dark"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/adamdotjs/vampiro.git"
+	},
 	"scripts": {
 		"build": "node ./scripts/build.js",
 		"lint": "node ./scripts/lint.js"
