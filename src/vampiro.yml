@@ -4,49 +4,49 @@ semanticClass: theme.vampiro
 semanticHighlighting: true
 vampiro:
   base:
-    - &BG "#191C2A"
-    - &FG "#8690B6"
-    - &FG_LIGHT "#CFD3E2"
-    - &SELECTION "#414A6C"
-    - &COMMENT "#5A6695"
-    - &CYAN "#09CFEC"
-    - &GREEN "#12DE5E"
-    - &ORANGE "#F7A444"
-    - &PINK "#FB5DBC"
-    - &PURPLE "#B383FA"
-    - &RED "#FD3744"
-    - &YELLOW "#E0EE5E"
+    - &BG "#1B1D28"
+    - &FG "#8B91B1"
+    - &FG_LIGHT "#D1D4E0"
+    - &SELECTION "#454B68"
+    - &COMMENT "#606890"
+    - &CYAN "#7AD8EC"
+    - &GREEN "#2DE266"
+    - &ORANGE "#EDA85D"
+    - &PINK "#F269B9"
+    - &PURPLE "#AF86EB"
+    - &RED "#F0474A"
+    - &YELLOW "#E0E97C"
   ansi:
-    - &COLOR0 "#11141D"
-    - &COLOR1 "#FD3744"
-    - &COLOR2 "#12DE5E"
-    - &COLOR3 "#E0EE5E"
-    - &COLOR4 "#B383FA"
-    - &COLOR5 "#FB5DBC"
-    - &COLOR6 "#09CFEC"
-    - &COLOR7 "#8690B6"
-    - &COLOR8 "#5A6695"
-    - &COLOR9 "#FD6871"
-    - &COLOR10 "#34EF7A"
-    - &COLOR11 "#E9F38C"
-    - &COLOR12 "#D2B5FC"
-    - &COLOR13 "#FC8DD0"
-    - &COLOR14 "#31DEF7"
-    - &COLOR15 "#DFE2EC"
+    - &COLOR0 "#14161F"
+    - &COLOR1 "#F0474A"
+    - &COLOR2 "#2DE266"
+    - &COLOR3 "#E0E97C"
+    - &COLOR4 "#AF86EB"
+    - &COLOR5 "#F269B9"
+    - &COLOR6 "#7AD8EC"
+    - &COLOR7 "#8B91B1"
+    - &COLOR8 "#606890"
+    - &COLOR9 "#FC787D"
+    - &COLOR10 "#5DE486"
+    - &COLOR11 "#EBF296"
+    - &COLOR12 "#CEB1F6"
+    - &COLOR13 "#F995D0"
+    - &COLOR14 "#29E0FA"
+    - &COLOR15 "#E0E2EB"
   brightOther:
     # Temporary (awaiting fix)
-    - &TEMP_QUOTES "#E0EE5E"
-    - &TEMP_PROPERTY_QUOTES "#09CFEC"
+    - &TEMP_QUOTES "#E0E97C"
+    - &TEMP_PROPERTY_QUOTES "#7AD8EC"
   other:
-    - &LineHighlight "#414A6C75"
-    - &NonText "#DFE2EC1A"
-    - &WHITE "#DFE2EC"
-    - &TAB_DROP_BG "#414A6C70"
+    - &LineHighlight "#454B6875"
+    - &NonText "#E0E2EB1A"
+    - &WHITE "#E0E2EB"
+    - &TAB_DROP_BG "#454B6870"
     # UI Variants
-    - &BGLighter "#2E344C"
-    - &BGLight "#232739" #
-    - &BGDark "#11141D" #
-    - &BGDarker "#0A0B10"
+    - &BGLighter "#313549"
+    - &BGLight "#252837" #
+    - &BGDark "#14161F" #
+    - &BGDarker "#101218"
 
 # User Interface (more info: https://code.visualstudio.com/docs/getstarted/theme-color-reference)
 colors:
@@ -210,7 +210,7 @@ colors:
   editor.snippetFinalTabstopHighlightBorder: *GREEN # Highlight border color of the final tabstop of a snippet
 
   editorWhitespace.foreground: *BGLighter # Color of whitespace characters in the editor
-  editorIndentGuide.background: *BGLighter # Color of the editor indentation guides
+  editorIndentGuide.background: !alpha [*SELECTION, 50] # Color of the editor indentation guides
   editorIndentGuide.activeBackground: *SELECTION # Color of the active indentation guide
   editorRuler.foreground: *BGLighter # Color of the editor rulers
 
